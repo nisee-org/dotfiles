@@ -18,7 +18,7 @@ if [ ! -d $HOME/.dotfiles ]; then
   # I know its hard but sometimes we just accept I cannot do it with functions or aliases
   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@ config --local status.showUntrackedFiles no
   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@ fetch
-  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@ checkout main --force
+  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@ checkout master --force
 fi
 
 # Sets up docker
@@ -45,7 +45,7 @@ if ! command -v node &>/dev/null; then
   # Install and uses node 21
   nvm install v21
   nvm alias default v21
-  npm i -g pnpm tsx npm yarn
+  npm i -g pnpm npm yarn
 fi
 
 # Sets up bun.js
